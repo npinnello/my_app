@@ -2,10 +2,10 @@ import "./app.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Navbar } from "./components/navbar";
 import { Shop } from "./pages/shop/shop";
-import { Contact } from "./pages/contact";
 import { Cart } from "./pages/cart/cart";
-import { ShopContextProvider } from "./context/shop-context";
-//import { Checkout } from "./pages/Checkout/checkout";
+import { ShopContextProvider } from "./shop-context";
+import { Checkout } from "./pages/checkout/checkout";
+//import { Checkout } from "./pages/checkout/checkout";
 
 function App() {
   return (
@@ -16,7 +16,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Shop />} />
             <Route path="/cart" element={<Cart />} />
-            {/* <Route path="/checkout" element={<Checkout />} /> */}
+            <Route path="/checkout" element ={<Checkout />} />
+             {/* <Route path="/checkout" element={<Checkout />} />  */}
           </Routes>
         </Router>
       </ShopContextProvider>
